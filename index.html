@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia Page by - Apex Tom</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="side-bar-inner">
+        <div class="sidebar-logo">
+          <h3>Apex Tom</h3>
+        </div>
+
+        <div id="imagesButton" class="side-bar-button active">
+          <a href="#images-tab"><button>Images</button></a>
+        </div>
+
+        <!-- <div id="musicButton" class="side-bar-button">
+          <a href="#music-tab"><button>Music</button></a>
+        </div> -->
+
+        <div id="videosButton" class="side-bar-button">
+          <a href="#videos-tab"><button>Videos</button></a>
+        </div>
+
+        <div id="mapButton" class="side-bar-button">
+          <a href="#map-tab"><button>Map</button></a>
+        </div>
+      </div>
+
+      <div class="side-bar-footer">
+        <div class="social">
+          <div class="icon">
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=61556636368067"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="social">
+          <div class="icon">
+            <a target="_blank" href="https://x.com/tom_talented99"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-body">
+      <div class="main-body-inner">
+        <div class="nav-header">
+          <div class="nav-left">
+            <a href="#images-tab">Images</a>
+            <a href="#videos-tab"> Videos</a>
+            <a href="#map-tab"> Map</a>
+          </div>
+
+          <div class="nav-right">
+            <h3>Apex Tom</h3>
+          </div>
+        </div>
+
+        <div class="tab" id="images-tab">
+          <div class="sectionTitle">
+            <h3>Images</h3>
+            <p>Enter Keyword and Click Search Image</p>
+          </div>
+
+          <div class="search-image">
+            <input value="nature" id="search_i" type="text" />
+            <button id="search_image">search image</button>
+          </div>
+
+          <div id="img_container" class="images-container">
+            <p>Loading Images....</p>
+          </div>
+        </div>
+
+        <!-- <div class="tab" id="music-tab">
+          <div class="sectionTitle">
+            <h3>Music</h3>
+            <p>Dynamically Rendered Songs using an API</p>
+          </div>
+
+          <div class="music-container">
+            <audio controls>
+              <source
+                src="https://www.last.fm/music/RUNTOWN/_/Mad+Over+You"
+                type="audio/mpeg"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div> -->
+        <div class="tab" id="videos-tab">
+          <div class="sectionTitle">
+            <h3>Videos</h3>
+            <p>Enter Keyword and Click Search Video</p>
+          </div>
+
+          <div class="search-image">
+            <input value="nature" id="search_vid" type="text" />
+            <button id="search_video">search video</button>
+          </div>
+
+          <div id="vid_c" class="videos-container"></div>
+        </div>
+
+        <div class="tab" id="map-tab">
+          <div class="sectionTitle">
+            <h3>Map</h3>
+            <p>You are Here</p>
+          </div>
+
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./scripts/index.js"></script>
+<script src="./scripts/all.min.js"></script>
+<script src="./scripts/imageApi.js"></script>
+<script src="./scripts/videosApi.js"></script>
+<!-- <script src="./scripts/musicApi.js"></script> -->
+<script src="./scripts/mapApi.js"></script>
